@@ -96,85 +96,14 @@ export default function Project() {
            </div>
         </div>
       </div>
-      <div className="project-2" data-aos="fade-left">
-        <div className="project-2-image">
-          <img src={image2} alt=""  className="project-1-image-1"/>
-        </div>
-        <div className="project-2-content">
-          <h1>Inventory Managment Web Application</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis illum earum dolore consequatur soluta harum commodi. Nemo modi quos nostrum voluptatem quibusdam itaque quasi optio, officia ad perspiciatis ullam quas!</p>
-          <div className='buttons-about'>
-                            <a className="button-about-cv" href="\" download="downloaded_file.pdf">
-                            <span className="button-about-cv_lg">
-                                <span className="button-about-cv_sl"></span>
-                                <span className="button-about-cv_text">Project Link</span>
-                            </span>
-                        </a>  
-           </div>
-        </div>
-      </div>
+     
 
-      <div className="project-1" >
-        <div className="project-1-image" data-aos="zoom-in-down">
-          <img src={NFT} alt=""  className="project-1-image-2"/>
-        </div>
-        <div className="project-1-content"  data-aos="fade-right">
-          <h1>Sysnetiks</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis illum earum dolore consequatur soluta harum commodi. Nemo modi quos nostrum voluptatem quibusdam itaque quasi optio, officia ad perspiciatis ullam quas!</p>
-          <div className='buttons-about'>
-                            <a className="button-about-cv" >
-                            <span className="button-about-cv_lg">
-                                <span className="button-about-cv_sl"></span>
-                                <span className="button-about-cv_text">Project Link</span>
-                            </span>
-                        </a>  
-           </div>
-        </div>
-      </div>
+      
 
       {/* MAIN DIV ENDS HERE */}
     </div>
 
     </>
-    // <div className="project">
-    //   <div className="item-list">
-    //     <h2 className='heading'>PROJECTS</h2>
-    //     <ul>
-    //       {items.map(item => (
-    //         <li
-    //           key={item.id}
-    //           onClick={() => onItemClick(item)}
-    //           className={selectedItem && selectedItem.id === item.id ? 'clicked' : ''}
-    //         >
-    //           <img src={item.imageUrl} alt={`Thumbnail for ${item.name}`} />
-    //           <span>{item.name}</span>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </div>
 
-    //   <div className={`item-details ${selectedItem ? 'show' : ''}`}>
-    //     <h2 className='heading'>Project Details</h2>
-    //     {selectedItem ? (
-    //       <div className="details-container">
-    //         <h3>{selectedItem.name}</h3>
-    //         <img src={selectedItem.imageUrl} alt={`Image for ${selectedItem.name}`} />
-    //         <details>
-    //           <summary>Description</summary>
-    //           <p>{selectedItem.description}</p>
-    //         </details>
-    //         <details>
-    //           <summary>Skills</summary>
-    //           <p>{selectedItem.description}</p>
-    //         </details>
-    //         <button className='btn-pro'>
-    //           <a className="links" href={selectedItem.ProjectLink} target='_blank' rel="noopener noreferrer">Project Link</a>
-    //         </button>
-    //       </div>
-    //     ) : (
-    //       <p>Select an item to view details.</p>
-    //     )}
-    //   </div>
-    // </div>
   )
 }
