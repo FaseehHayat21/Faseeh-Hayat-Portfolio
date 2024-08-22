@@ -1,0 +1,208 @@
+.my-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+    /* height: 85vh; */
+    flex-wrap: wrap-reverse;
+    color: #000;
+    /* margin-top: 20vh; */
+}
+.introduction{
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.up-work{
+  width: 70%;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(7, 7, 7);
+    text-align: center;
+   
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-button{
+    color: aliceblue;
+    border: 2px solid black;
+    background-color: rgb(39, 32, 32);
+    border-radius: 14px;
+    padding: 3px 13px;
+    margin: 2px 2px;
+}
+
+.about-image-1{
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+
+  
+/* @media (max-width: 1080px) {
+    .my-section{
+        margin-top: 18vh;
+    }
+    .about-image{
+        margin-bottom: 5vh;
+    }
+  }
+  
+
+   */
+
+  .social-card {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: rgb(255, 255, 255);
+  padding: 20px 25px;
+  border-radius: 14px;
+}
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  z-index: 2;
+}
+
+.BG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: 1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+  font-size: 0px;
+}
+.github .BG {
+  background: #181818;
+}
+.linkdin .BG {
+  background: #0077b5;
+}
+.whatsapp .BG {
+  background: #075e54;
+}
+.discord .BG {
+  background: #7289da;
+}
+.Btn:hover .BG {
+  transform: scale(1.5);
+  /* transform-origin: bottom; */
+  font-size: 20px;
+  color: white;
+}
+
+.Btn:hover .svgContainer {
+  border: 1px solid rgba(216, 216, 216, 0.466);
+  background-color: rgba(209, 209, 209, 0.466);
+  backdrop-filter: blur(4px);
+}
+    
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+
+@media (max-width: 600px) {
+
+  .my-image-p-p{
+    height: 56vh;
+  } 
+}
+/* 
+
+@media (max-width: 500px) {
+
+  .my-image-p-p{
+    width: 48vh;
+    height: 61vh;
+  } 
+
+}
+@media (max-width: 370px) {
+
+  .my-image-p-p{
+    width: 38vh;
+    height: 52vh;
+  } 
+
+} */

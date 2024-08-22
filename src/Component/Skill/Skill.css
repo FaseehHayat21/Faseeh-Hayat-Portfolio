@@ -1,0 +1,52 @@
+.ski{
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    /* background: url("../../assets/background2.svg"); */
+    background-color: #1f1f27;
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+    border-bottom: 3px solid black;
+}
+.ski-item-1{
+    margin-top: 14px;
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    color: bisque;
+    width: 70%;
+    border-bottom: 2px solid rgb(255, 255, 255) ;
+}
+
+.img1{
+    display: flex;
+    width: auto;
+
+}
+
+.image1{
+    height: 10vh;
+    width: 10vh;
+    margin-right: 13px;
+}
+
+.imageexp{
+    height: 8vh;
+    width: 14vh;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.imagemd{
+    height: 8vh;
+    width: 10vh;
+    margin-right: 13px;
+}
+.btn{
+    width: 15vh;
+    height: 10vh;
+    border: 1px solid rgb(243, 243, 243);
+    border-radius: 100px;
+}
