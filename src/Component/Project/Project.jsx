@@ -4,6 +4,7 @@ import image1 from '../../assets/image1.jpg';
 import image2 from "../../assets/WEBSITE.jpg";
 import blog from "../../assets/blog-1.jpg";
 import image3 from "../../assets/TextEditor.png";
+import sysnetiks from "../../assets/sysnetiks.png";
 import NFT from "../../assets/Mockups.png"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -84,6 +85,25 @@ export default function Project() {
         <div className="project-1-content"  data-aos="fade-right">
           <h1>NFT E-MArketPlace</h1>
           <p>• Developed the frontend interface for an NFT E-marketplace using HTML, CSS, and JavaScript.
+             • Designed responsive layouts and user interfaces to highlight and navigate NFT collections effectively.
+             • Implemented interactive features and animations to enhance user engagement and browsing exp</p>
+          <div className='buttons-about'>
+                            <a className="button-about-cv" href="https://github.com/FaseehHayat21/NFTs-MarketPlace" target='_blank'>
+                            <span className="button-about-cv_lg">
+                                <span className="button-about-cv_sl"></span>
+                                <span className="button-about-cv_text">Project Link</span>
+                            </span>
+                        </a>  
+           </div>
+        </div>
+      </div>
+      <div className="project-2" >
+        <div className="project-2-image" data-aos="zoom-in-down">
+          <img src={sysnetiks} alt=""  className="project-1-image-2"/>
+        </div>
+        <div className="project-2-content"  data-aos="fade-right">
+          <h1>Sysnetiks</h1>
+          <p>• Developed the frontend interface for an Sysnetiks using React.
              • Designed responsive layouts and user interfaces to highlight and navigate NFT collections effectively.
              • Implemented interactive features and animations to enhance user engagement and browsing exp</p>
           <div className='buttons-about'>
