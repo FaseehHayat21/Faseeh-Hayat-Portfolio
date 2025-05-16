@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 
 const Services = () => {
+   useEffect(() => {
+    const cards = document.querySelectorAll('.luxury-card');
+    
+    const handleMouseMove = (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      e.currentTarget.querySelector('.card-hover-effect').style.setProperty('--x', `${x}px`);
+      e.currentTarget.querySelector('.card-hover-effect').style.setProperty('--y', `${y}px`);
+    };
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', handleMouseMove);
+    });
+
+    return () => {
+      cards.forEach(card => {
+        card.removeEventListener('mousemove', handleMouseMove);
+      });
+    };
+  }, []);
+
   const services = [
     {
       title: "Custom Web Design",
@@ -42,21 +64,32 @@ const Services = () => {
   ];
 
   return (
-    <div className="services-glass-container">
-      <header className="services-glass-header">
-        <h1>Our Premium Services</h1>
-        <p>Experience the art of digital excellence with our bespoke solutions.</p>
-      </header>
-      <div className="services-glass-grid">
-        {services.map((service, index) => (
-          <div key={index} className="glass-card">
-            <div className="glass-icon">{service.icon}</div>
-            <h2>{service.title}</h2>
-            <p>{service.description}</p>
-          </div>
-        ))}
+    <section className="luxury-services">
+      <div className="luxury-container">
+        <header className="luxury-header">
+          <h1 className="luxury-title">
+            <span className="title-gradient">Our Premium Services</span>
+          </h1>
+          <p className="luxury-subtitle">
+            Experience the art of digital excellence with our bespoke solutions
+          </p>
+          <div className="luxury-divider"></div>
+        </header>
+
+        <div className="luxury-grid">
+          {services.map((service, index) => (
+            <div key={index} className="luxury-card">
+              <div className="card-inner">
+                <div className="card-icon">{service.icon}</div>
+                <h3 className="card-title">{service.title}</h3>
+                <p className="card-description">{service.description}</p>
+                <div className="card-hover-effect"></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

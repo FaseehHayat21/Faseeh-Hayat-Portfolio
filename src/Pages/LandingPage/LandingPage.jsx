@@ -36,9 +36,12 @@ export default function LandingPage() {
           <ProjectPage />
         </div>
         {/* <Skill /> */}
-        <div id="experience-section">
-          <Timeline />
+        <div  id="experience-section">
+          <Experience/>
         </div>
+        {/* <div id="experience-section">
+          <Timeline />
+        </div> */}
         <div id="contactus">
           <ContactUs />
         </div>

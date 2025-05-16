@@ -1,72 +1,200 @@
-/* Overall container with a luxurious dark gradient */
-.services-glass-container {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #030303;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Luxury Services CSS */
+.luxury-services {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  color: #ffffff;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 30%);
+  z-index: 0;
+}
+
+.luxury-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.luxury-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.luxury-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.title-gradient {
+  background: linear-gradient(90deg, #ffd700, #ffcc00, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.luxury-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.luxury-divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, transparent);
+  margin: 30px auto;
+  position: relative;
+}
+
+.luxury-divider::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffd700);
+}
+
+.luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.luxury-card {
+  perspective: 1000px;
+  height: 100%;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.luxury-card:hover .card-inner {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.luxury-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.luxury-card:hover .card-title::after {
+  width: 100%;
+}
+
+.card-description {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.luxury-card:hover .card-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--x) var(--y), rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.luxury-card:hover .card-hover-effect {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .luxury-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-services {
+    padding: 80px 20px;
   }
   
-  /* Header styling */
-  .services-glass-header {
-    text-align: center;
-    margin-bottom: 50px;
+  .luxury-title {
+    font-size: 2.5rem;
   }
   
-  .services-glass-header h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  .luxury-subtitle {
+    font-size: 1.1rem;
   }
   
-  .services-glass-header p {
-    font-size: 18px;
-    color: #0004ff;
+  .luxury-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsive grid layout for service cards */
-  .services-glass-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  /* Glassmorphism card style */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .glass-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-  }
-  
-  .glass-card h2 {
-    margin-top: 15px;
-    font-size: 24px;
-  }
-  
-  .glass-card p {
-    font-size: 16px;
-    color: #000000;
-    margin-top: 10px;
-  }
-  
-  /* Gold-accented icon */
-  .glass-icon {
-    font-size: 48px;
-    color: #ffcc00;
-  }
-  
+}

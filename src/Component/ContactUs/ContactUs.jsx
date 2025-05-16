@@ -23,16 +23,16 @@ export default function ContactUs() {
           <h3>Contact Information</h3>
           <div className="info-item">
             <FaPhone className="icon" />
-            <p>+1 5589 55488 55
+            <p>03400206911  
             </p>
           </div>
           <div className="info-item">
             <FaEnvelope className="icon" />
-            <p>Imran.sarwar@amtegrity.com</p>
+            <p>faseehhayat999@gmail.com</p>
           </div>
           <div className="info-item">
             <FaMapMarkerAlt className="icon" />
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <p>Islamabad, Pakistan</p>
           </div>
         </div>
 
