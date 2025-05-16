@@ -1,35 +1,32 @@
 import React, { useState } from "react";
 import "./ProjectPage.css";
-
+import itl from "../../assets/itl.png"
+import amt from "../../assets/amt.png"
+import lap from "../../assets/lap.png"
+import dis from "../../assets/dis.png"
 const ProjectPage = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   const frontendProjects = [
     { 
-      name: "Portfolio Website", 
-      description: "A personal portfolio site with animations.",
-      image: "portfolio.jpg",
-      link: "https://myportfolio.com"
+      name: "Infinity Tech Labs", 
+      description: "Infinity Tech Labs is a cutting-edge technology solutions provider specializing in innovative software development, ",
+      image: itl,
+      link: "https://infinitytechlabs.org/"
     },
     { 
-      name: "E-commerce UI", 
-      description: "An interactive UI for an online store.",
-      image: "ecommerce.jpg",
-      link: "https://ecommerce.com"
-    },
-    { 
-      name: "News Aggregator", 
-      description: "A React app fetching and displaying news.",
-      image: "news.jpg",
-      link: "https://newsapp.com"
+      name: "Amtegrity Inc", 
+      description: "Amtegrity is a trusted cybersecurity and compliance solutions provider, dedicated to safeguarding government and enterprise systems. R",
+      image: amt,
+      link: "https://amtegrity.netlify.app/"
     }
   ];
 
   const fullstackProjects = [
     { 
-      name: "Inventory Management System", 
-      description: "A MERN stack app for managing stock.",
-      image: "inventory.jpg",
+      name: "LapShop ", 
+      description: "A MERN stack app for managing LaptopsWe provide a seamless platform for buying and selling laptops effortlesslyLapShop: Your trusted marketplace for quality laptops at thebest prices.",
+      image: lap,
       link: "https://inventoryapp.com"
     },
     { 
@@ -41,8 +38,8 @@ const ProjectPage = () => {
     { 
       name: "Discountify", 
       description: "A student facilitation portal for discounts and jobs.",
-      image: "discountify.jpg",
-      link: "https://discountify.com"
+      image: dis,
+      link: "https://discountifyfyp.netlify.app"
     }
   ];
 
